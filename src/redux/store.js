@@ -5,5 +5,6 @@ import reducer from './reducer'
 
 const enhancer = applyMiddleware(thunk, logger)
 const store = createStore(reducer, enhancer)
+window.store = store.getState()
 
 export default store
